@@ -1,0 +1,14 @@
+Nombres_Directorios_ = "materiales.txt"
+Enlaces_ = "enlaces.txt"
+
+tuplas = []
+
+with open(Nombres_Directorios_,"r") as minerales, open(Enlaces_,"r") as enlaces:
+    Linea_minerales = minerales.readlines()
+    Linea_enlaces = enlaces.readlines()
+
+for nombre, descarga in zip(Linea_minerales, Linea_enlaces):
+    tupla = (nombre.strip(), descarga.strip())
+    tuplas.append(tupla)
+
+print(tuplas)
